@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="niharika.css">
+    <style>
+        label {
+            color: rgb(19, 17, 17);
+            font-size: 20px;
+
+        }
+
+        .container {
+            /* padding: 50px; */
+            padding-left: 10px;
+            margin: 40px auto 0;
+            width: 550px;
+            /* align-content: center; */
+            border-top: 5px solid aqua;
+            box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.5);
+            padding-right: 20px;
+
+        }
+
+        h1 {
+            text-align: center;
+            padding: 0px;
+        }
+
+        .form-input {
+            padding: 30px;
+            margin: 10px auto;
+            /* position: center; */
+            width: 90%;
+        }
+
+        input[type=submit] {
+            background-color: #00ff7f;
+            border-radius: 4px;
+            cursor: pointer;
+            color: black;
+        }
+
+        input[type=reset] {
+            background-color: springgreen;
+            color: black;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: rgb(187, 255, 0);
+            /* border-radius: 4px; */
+        }
+
+        input[type=reset]:hover {
+            background-color: rgb(187, 255, 0);
+            /* border-radius: 4px; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1>REGISTRATION FORM</h1>
+        </div>
+        <hr>
+
+        <form id="Formbody">
+            <div class="form-input">
+                <label for="name"><b>Name</b> </label>
+                <div>
+                    <input type="text" name="myname" id="name" placeholder="name">
+                </div>
+                <br>
+                <label for="email"> <b>official email:</b> </label>
+                <div>
+                    <input type="email" name="myemail" id="email" placeholder="email">
+                </div>
+                <br>
+                <label for="pass"> <b> password:</b></label>
+                <div>
+                    <input type="password" name="mypass" id="password" placeholder="password">
+
+                    <label for="repass"> <b> re-password:</b></label>
+                    <input type="password" name="mypass" id="repassword" placeholder="repassword">
+                </div>
+                <br>
+                <label for="myaddress"> <b>residential address:</b> </label>
+                <div>
+                    <input type="text" name="myaddress" id="myaddress" placeholder="address">
+                </div>
+                <br>
+                <label for="pincode"> <b> pincode</b></label>
+                <div>
+                    <input type="number" name="pin" id="pincode" placeholder="pincode">
+                </div>
+                <br>
+                <label for="phoneNo"> <b>phone number</b> </label>
+                <div>
+                    <input type="number" name="num" id="phno" placeholder="phnno">
+                </div>
+                <br>
+                <label for="username"> <b>username</b> </label>
+                <div>
+                    <input type="text" name="user" id="username" placeholder="username">
+                </div>
+                <br>
+                <label for="url"> <b>Profile Pic</b> </label>
+                <div>
+                    <input type="file" name="image" id="url">
+                </div>
+                <br>
+                <hr>
+
+                <div>
+                    <input type="submit" value="register" onclick="phncheck(); passcheck();">
+                </div>
+                <br>
+                <div>
+                    <input type="reset" value=" reset">
+                </div>
+                <p>
+                    Already have an account?<a href="#">Sign in</a>
+                </p>
+
+            </div>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        function passcheck() {
+            var x = document.getElementById("password").value;
+            var y = document.getElementById("repassword").value;
+            if (x != y) {
+                alert("Password entered is wrong!");
+            }
+        }
+        function phncheck() {
+            var x = document.getElementById("phno").value;
+            if (x.lenght < 10 || x.length > 10) {
+                alert("incorrect phn no");
+            }
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
